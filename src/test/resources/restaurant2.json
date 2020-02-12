@@ -1,0 +1,9 @@
+{
+  "name": "Restaurant2",
+  "description": "desc2",
+  "location": {"x":  4, "y":  5},
+  "menu": [
+    {"name": "Food21", "description": "food desc21", "popularity": 0.1, "price": 21000},
+    {"name": "Food22", "description": "food desc22", "popularity": 0.7, "price": 36000}
+  ]
+}
