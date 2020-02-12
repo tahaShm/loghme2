@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class Restaurant {
     private String name;
-    private String description;
     private Location location;
+    private String logo;
     private ArrayList<Food> menu = new ArrayList<>();
 
     public String getName() {
@@ -19,12 +19,12 @@ public class Restaurant {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public Location getLocation() {

@@ -12,6 +12,7 @@ public class Food {
     private String name;
     private String description;
     private float popularity;
+    private String image;
     private int price;
 
     public String getName() {
@@ -36,6 +37,14 @@ public class Food {
 
     public void setPopularity(float popularity) {
         this.popularity = popularity;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getPrice() {

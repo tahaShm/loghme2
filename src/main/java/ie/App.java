@@ -22,6 +22,10 @@ public class App
         return singleApp;
     }
 
+    public void setRestaurants(ArrayList<Restaurant> inRestaurants) {
+        restaurants = inRestaurants;
+    }
+
     public void clear() {
         restaurants.clear();
         customer.clear();
