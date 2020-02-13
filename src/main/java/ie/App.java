@@ -224,4 +224,8 @@ public class App
     public Customer getCustomer() {
         return customer;
     }
+
+    public void addCredit(int credit) {
+        customer.addCredit(credit);
+    }
 }

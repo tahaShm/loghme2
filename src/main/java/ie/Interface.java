@@ -55,33 +55,51 @@ public class Interface {
         app.getCustomer().setCredit(100000);
 
         Javalin jvl = Javalin.create().start(7070);
-        Javalin s = jvl.get("*",
+        Javalin getServer = jvl.get("*",
                 ctx -> {
-                System.out.println(ctx.url());
+                System.out.println("GET : " + ctx.url());
                 StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
                 String httpStr = tokenizer.nextToken();
                 String domainStr = tokenizer.nextToken();
-                String firstToken = "", secondToken = "";
+                String firstToken = "", secondToken = "", response = "";
                 if (tokenizer.hasMoreElements())
                     firstToken = tokenizer.nextToken();
                 if (tokenizer.hasMoreElements())
                     secondToken = tokenizer.nextToken();
-                System.out.println(secondToken);
-
-                Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
-                Command newCommand = commandClass.getDeclaredConstructor().newInstance();
-                String response = "";
-                try {
-                    response = newCommand.handle(secondToken);
+                if (!(firstToken.isEmpty() || firstToken.equals("favicon.ico"))) {
+                    Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
+                    Command newCommand = commandClass.getDeclaredConstructor().newInstance();
+                    try {
+                        response = newCommand.handle(secondToken);
+                    }
+                    catch (Exception e) {
+                        if (e instanceof NotFound404Exp)
+                            response = "Page not found";
+                        else if (e instanceof Forbidden403Exp)
+                            response = "Forbidden access";
+                    }
                 }
-                catch (Exception e) {
-                    if (e instanceof NotFound404Exp)
-                        response = "Page not found";
-                    else if (e instanceof Forbidden403Exp)
-                        response = "Forbidden access";
-                }
+                else
+                    response = "Page not found";
                 ctx.contentType("text/html");
                 ctx.result(response);
+        });
+        Javalin postServer = jvl.post("*",
+                ctx -> {
+                    System.out.println("POST : " + ctx.url());
+                    StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
+                    String httpStr = tokenizer.nextToken();
+                    String domainStr = tokenizer.nextToken();
+                    String firstToken = "", secondToken = "", redirectUrl = "";
+                    if (tokenizer.hasMoreElements())
+                        firstToken = tokenizer.nextToken();
+                    if (tokenizer.hasMoreElements())
+                        secondToken = tokenizer.nextToken();
+
+                    Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
+                    Command newCommand = commandClass.getDeclaredConstructor().newInstance();
+                    redirectUrl = newCommand.handle(ctx.body());
+                    ctx.redirect(redirectUrl);
         });
     }
 }

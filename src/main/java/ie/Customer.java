@@ -103,4 +103,8 @@ public class Customer {
         restaurantName = "";
         foodCart.clear();
     }
+
+    public void addCredit(int toAddCredit) {
+        credit += toAddCredit;
+    }
 }

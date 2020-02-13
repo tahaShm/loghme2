@@ -25,7 +25,7 @@ public class getProfile implements Command {
                 "        <li>phone number: " + customer.getPhoneNumber() + "</li>\n" +
                 "        <li>email: " + customer.getEmail() + "</li>\n" +
                 "        <li>credit: " + customer.getCredit() + " Toman</li>\n" +
-                "        <form action=\"\" method=\"POST\">\n" +
+                "        <form action=\"/addCredit\" method=\"POST\">\n" +
                 "            <button type=\"submit\">increase</button>\n" +
                 "            <input type=\"text\" name=\"credit\" value=\"\" />\n" +
                 "        </form>\n" +
