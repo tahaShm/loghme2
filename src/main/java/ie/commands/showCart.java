@@ -25,7 +25,7 @@ public class showCart implements Command {
             content += "<li>" + entry.getKey() + " : " + entry.getValue() + "</li>\n";
         }
         content += "    </ul>\n" +
-                "    <form action=\"\" method=\"POST\">\n" +
+                "    <form action=\"/finalizeOrder\" method=\"POST\">\n" +
                 "        <button type=\"submit\">finalize</button>\n" +
                 "    </form>\n" +
                 "</body>\n" +

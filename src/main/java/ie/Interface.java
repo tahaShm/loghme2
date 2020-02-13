@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Interface {
-    private static App app;
-
     public static String getUrlBody(String url) throws Exception {
         URL urlObj = new URL(url);
         URLConnection urlConnection = urlObj.openConnection();
@@ -29,8 +27,6 @@ public class Interface {
         in.close();
         return body;
     }
-
-
 
     public static void main(String[] args) throws IOException {
         String loghmeBody = "";

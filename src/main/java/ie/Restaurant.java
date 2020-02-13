@@ -117,4 +117,12 @@ public class Restaurant {
         }
         return (total / menu.size());
     }
+
+    public int sendFoodPriceByName(String foodName) throws FoodNotFoundExp {
+        for (Food food: menu)
+            if (foodName.equals(food.getName()))
+                return food.getPrice();
+
+        throw new FoodNotFoundExp();
+    }
 }

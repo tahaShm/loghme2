@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class Customer {
     private boolean restaurantIsSet = false;
+    private String restaurantId;
     private String restaurantName;
     private Map<String, Integer> foodCart = new HashMap<String, Integer>();
     private String id;
@@ -20,7 +21,7 @@ public class Customer {
 
     public void clear() {
         restaurantIsSet = false;
-        restaurantName = "";
+        restaurantId = "";
         foodCart.clear();
     }
 
@@ -32,13 +33,17 @@ public class Customer {
         this.restaurantIsSet = restaurantIsSet;
     }
 
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) { this.restaurantId = restaurantId; }
+
     public String getRestaurantName() {
         return restaurantName;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
-    }
+    public void setRestaurantName(String restaurantName) { this.restaurantName = restaurantName; }
 
     public String getName() {
         return name;
@@ -80,9 +85,9 @@ public class Customer {
 
     public Map<String, Integer> getFoodCart() { return foodCart; }
 
-    public void addFoodToCart(String foodName, String restaurantName) {
+    public void addFoodToCart(String foodName, String restaurantId) {
         restaurantIsSet = true;
-        this.restaurantName = restaurantName;
+        this.restaurantId = restaurantId;
         for (Map.Entry<String, Integer> entry : foodCart.entrySet()) {
             if (entry.getKey().equals(foodName)){
                 entry.setValue(entry.getValue() + 1);
@@ -100,6 +105,7 @@ public class Customer {
 
     public void freeCart() {
         restaurantIsSet = false;
+        restaurantId = "";
         restaurantName = "";
         foodCart.clear();
     }

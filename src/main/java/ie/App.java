@@ -186,12 +186,15 @@ public class App
         if (!customer.isRestaurantSet())
             allowToAdd = true;
         else {
-            String currentRestaurantName = customer.getRestaurantName();
-            if (currentRestaurantName.equals(restaurant.getName()))
+            String currentRestaurantId = customer.getRestaurantId();
+            System.out.println(currentRestaurantId);
+            System.out.println("******");
+            System.out.println(restaurant.getId());
+            if (currentRestaurantId.equals(restaurant.getId()))
                 allowToAdd = true;
         }
         if (allowToAdd) {
-            customer.addFoodToCart(food.getName(), restaurant.getName());
+            customer.addFoodToCart(food.getName(), restaurant.getId());
         }
         else
             throw new FoodFromOtherRestaurantInCartExp();
@@ -243,5 +246,14 @@ public class App
 
     public void addCredit(int credit) {
         customer.addCredit(credit);
+    }
+
+    public int sendPrice(String foodName) throws BadRequest400Exp, NotFound404Exp, FoodNotFoundExp {
+        if (!customer.isRestaurantSet() || customer.getFoodCart().isEmpty())
+            throw new BadRequest400Exp();
+        Restaurant restaurant = getRestaurantById(customer.getRestaurantId());
+        int foodPrice = restaurant.sendFoodPriceByName(foodName);
+        return foodPrice;
+
     }
 }
