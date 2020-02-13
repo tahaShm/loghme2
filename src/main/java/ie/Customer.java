@@ -12,6 +12,11 @@ public class Customer {
     private boolean restaurantIsSet = false;
     private String restaurantName;
     private Map<String, Integer> foodCart = new HashMap<String, Integer>();
+    private String id;
+    private String name;
+    private String phoneNumber;
+    private String email;
+    private int credit;
 
     public void clear() {
         restaurantIsSet = false;
@@ -32,7 +37,45 @@ public class Customer {
     }
 
     public void setRestaurantName(String restaurantName) {
-        restaurantName = restaurantName;
+        this.restaurantName = restaurantName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
     }
 
     public Map<String, Integer> getFoodCart() { return foodCart; }

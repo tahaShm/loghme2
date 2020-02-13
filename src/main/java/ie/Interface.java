@@ -2,6 +2,7 @@ package ie;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ie.commands.Command;
 import ie.exp.Forbidden403Exp;
 import ie.exp.NotFound404Exp;
 import io.javalin.Javalin;
@@ -47,6 +48,11 @@ public class Interface {
 
         App app = App.getInstance();
         app.setRestaurants(convertedRestaurants);
+        app.getCustomer().setId("6859");
+        app.getCustomer().setName("Houman Chamani");
+        app.getCustomer().setPhoneNumber("+989300323231");
+        app.getCustomer().setEmail("hoomch@gmail.com");
+        app.getCustomer().setCredit(100000);
 
         Javalin jvl = Javalin.create().start(7070);
         Javalin s = jvl.get("*",
@@ -62,7 +68,7 @@ public class Interface {
                     secondToken = tokenizer.nextToken();
                 System.out.println(secondToken);
 
-                Class<Command> commandClass = (Class<Command>) Class.forName("ie." + firstToken);
+                Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
                 Command newCommand = commandClass.getDeclaredConstructor().newInstance();
                 String response = "";
                 try {

@@ -220,4 +220,8 @@ public class App
                 return restaurant;
         throw new NotFound404Exp();
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
 }

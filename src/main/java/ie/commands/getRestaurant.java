@@ -1,5 +1,8 @@
-package ie;
+package ie.commands;
 
+import ie.App;
+import ie.Food;
+import ie.Restaurant;
 import ie.exp.Forbidden403Exp;
 
 public class getRestaurant implements Command {

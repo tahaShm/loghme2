@@ -1,8 +1,12 @@
-package ie;
+package ie.commands;
+
+import ie.App;
+import ie.Restaurant;
+import ie.commands.Command;
 
 import java.util.ArrayList;
 
-public class getRestaurants implements Command{
+public class getRestaurants implements Command {
     public String handle(String param) {
         App app = App.getInstance();
         ArrayList<Restaurant> nearRestaurants = app.getCloseRestaurants(170);
