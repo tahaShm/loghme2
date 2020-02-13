@@ -1,29 +1,52 @@
 package ie;
 
+import java.util.ArrayList;
+
 public class getRestaurants implements Command{
     public String handle(String param) {
-        return "<!DOCTYPE html>\n" +
+        App app = App.getInstance();
+        ArrayList<Restaurant> nearRestaurants = app.getCloseRestaurants(170);
+        String content = "<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
                 "    <meta charset=\"UTF-8\">\n" +
-                "    <title>User</title>\n" +
+                "    <title>Restaurants</title>\n" +
                 "    <style>\n" +
-                "        li, div, form {\n" +
-                "        \tpadding: 5px\n" +
+                "        table {\n" +
+                "            text-align: center;\n" +
+                "            margin: auto;\n" +
+                "        }\n" +
+                "        th, td {\n" +
+                "            padding: 5px;\n" +
+                "            text-align: center;\n" +
+                "        }\n" +
+                "        .logo{\n" +
+                "            width: 100px;\n" +
+                "            height: 100px;\n" +
                 "        }\n" +
                 "    </style>\n" +
                 "</head>\n" +
                 "<body>\n" +
-                "    <div>restaurant name</div>\n" +
-                "    <ul>\n" +
-                "        <li>food 1:\u200C 2</li>\n" +
-                "        <li>food 2: 3</li>\n" +
-                "        <li>food 3: 1</li>\n" +
-                "    </ul>\n" +
-                "    <form action=\"\" method=\"POST\">\n" +
-                "        <button type=\"submit\">finalize</button>\n" +
-                "    </form>\n" +
+                "    <table>\n" +
+                "        <tr>\n" +
+                "            <th>id</th>\n" +
+                "            <th>logo</th>\n" +
+                "            <th>name</th>\n" +
+                "        </tr>\n";
+        String rows = "";
+        for (Restaurant restaurant: nearRestaurants) {
+            rows +=
+                "        <tr>\n" +
+                "            <td>" + restaurant.getId() + "</td>\n" +
+                "            <td><img class=\"logo\" src=\"" + restaurant.getLogo() + "\" alt=\"logo\"></td>\n" +
+                "            <td>" + restaurant.getName() + "</td>\n" +
+                "        </tr>\n";
+        }
+        content += rows;
+        content += "    </table>\n" +
                 "</body>\n" +
                 "</html>";
+
+        return content;
     }
 }

@@ -22,9 +22,7 @@ public class App
         return singleApp;
     }
 
-    public void setRestaurants(ArrayList<Restaurant> inRestaurants) {
-        restaurants = inRestaurants;
-    }
+    public void setRestaurants(ArrayList<Restaurant> inRestaurants) { restaurants = inRestaurants; }
 
     public void clear() {
         restaurants.clear();
@@ -202,5 +200,15 @@ public class App
         Map<String, Float> bestRestaurants = getBestRestaurants(numOfBests);
         ObjectMapper mapperObj = new ObjectMapper();
         return mapperObj.writeValueAsString(bestRestaurants);
+    }
+
+    public ArrayList<Restaurant> getCloseRestaurants(float distance){
+        ArrayList<Restaurant> closeRestaurants = new ArrayList<>();
+        for (int i = 0; i < restaurants.size(); i++) {
+            if (restaurants.get(i).getLocation().sendDistance() <= distance) {
+                closeRestaurants.add(restaurants.get(i));
+            }
+        }
+        return closeRestaurants;
     }
 }

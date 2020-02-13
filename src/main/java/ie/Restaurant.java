@@ -6,10 +6,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Restaurant {
+    private String id;
     private String name;
     private Location location;
     private String logo;
     private ArrayList<Food> menu = new ArrayList<>();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
