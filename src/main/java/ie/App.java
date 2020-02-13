@@ -1,6 +1,8 @@
 package ie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ie.exp.*;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -106,7 +108,7 @@ public class App
         restaurants.add(newRestaurant);
     }
 
-    public void addFood(String jsonData) throws RestaurantNotFoundExp, IOException, FoodAlreadyExistsExp{
+    public void addFood(String jsonData) throws RestaurantNotFoundExp, IOException, FoodAlreadyExistsExp {
         ObjectMapper mapper = new ObjectMapper();
         Food newFood = mapper.readValue(jsonData, Food.class);
         int index = getIndexOfRestaurant(jsonData, 1);
@@ -124,7 +126,7 @@ public class App
         return response;
     }
 
-    public String getRestaurant(String jsonData) throws RestaurantNotFoundExp, IOException{
+    public String getRestaurant(String jsonData) throws RestaurantNotFoundExp, IOException {
         int index = getIndexOfRestaurant(jsonData, 0);
         if (index >= 0)
             return restaurants.get(index).sendJsonInfo();
@@ -210,5 +212,12 @@ public class App
             }
         }
         return closeRestaurants;
+    }
+
+    public Restaurant getRestaurantById(String inId) throws NotFound404Exp {
+        for (Restaurant restaurant: restaurants)
+            if (restaurant.getId().equals(inId))
+                return restaurant;
+        throw new NotFound404Exp();
     }
 }

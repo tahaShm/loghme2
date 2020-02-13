@@ -2,6 +2,8 @@ package ie;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ie.exp.Forbidden403Exp;
+import ie.exp.NotFound404Exp;
 import io.javalin.Javalin;
 
 import java.io.*;
@@ -58,10 +60,20 @@ public class Interface {
                     firstToken = tokenizer.nextToken();
                 if (tokenizer.hasMoreElements())
                     secondToken = tokenizer.nextToken();
+                System.out.println(secondToken);
 
                 Class<Command> commandClass = (Class<Command>) Class.forName("ie." + firstToken);
                 Command newCommand = commandClass.getDeclaredConstructor().newInstance();
-                String response = newCommand.handle(secondToken);
+                String response = "";
+                try {
+                    response = newCommand.handle(secondToken);
+                }
+                catch (Exception e) {
+                    if (e instanceof NotFound404Exp)
+                        response = "Page not found";
+                    else if (e instanceof Forbidden403Exp)
+                        response = "Forbidden access";
+                }
                 ctx.contentType("text/html");
                 ctx.result(response);
         });

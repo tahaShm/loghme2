@@ -1,4 +1,4 @@
-package ie;
+package ie.exp;
 
 public class RestaurantNotFoundExp extends Exception {
 }

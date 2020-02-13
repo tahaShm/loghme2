@@ -1,6 +1,8 @@
 package ie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import ie.exp.FoodAlreadyExistsExp;
+import ie.exp.FoodNotFoundExp;
 
 import java.io.IOException;
 import java.util.ArrayList;
