@@ -39,16 +39,20 @@ public class getRestaurant implements Command {
                 "        <li>logo: <img src=\"" + restaurant.getLogo() + "\" alt=\"logo\"></li>\n" +
                 "        <li>menu: \n" +
                 "        \t<ul>\n";
+        int counter = 0;
         for (Food food: restaurant.getMenu()) {
             content +=
                             "<li>\n" +
                             "    <img src=\"" + food.getImage() + "\" alt=\"logo\">\n" +
                             "    <div>" + food.getName() + "</div>\n" +
                             "    <div>" + food.getPrice() + " Toman</div>\n" +
-                            "    <form action=\"\" method=\"POST\">\n" +
+                            "    <form action=\"/addToCart\" method=\"POST\">\n" +
+                            "        <input name=\"index\" type=\"hidden\" value=\"" + counter + "\">" +
+                            "        <input name=\"restaurantId\" type=\"hidden\" value=\"" + restaurant.getId() + "\">" +
                             "        <button type=\"submit\">addToCart</button>\n" +
                             "    </form>\n" +
                             "</li>\n";
+            counter++;
         }
         content +=
                 "        \t</ul>\n" +

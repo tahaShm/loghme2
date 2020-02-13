@@ -181,6 +181,22 @@ public class App
         }
     }
 
+    public void addToCart(Food food, Restaurant restaurant) throws FoodFromOtherRestaurantInCartExp {
+        boolean allowToAdd = false;
+        if (!customer.isRestaurantSet())
+            allowToAdd = true;
+        else {
+            String currentRestaurantName = customer.getRestaurantName();
+            if (currentRestaurantName.equals(restaurant.getName()))
+                allowToAdd = true;
+        }
+        if (allowToAdd) {
+            customer.addFoodToCart(food.getName(), restaurant.getName());
+        }
+        else
+            throw new FoodFromOtherRestaurantInCartExp();
+    }
+
     public Map<String, Integer> getCart() {
         return customer.getFoodCart();
     }
