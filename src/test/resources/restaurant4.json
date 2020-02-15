@@ -1,0 +1,10 @@
+{
+  "id":"4",
+  "name":"restaurant4",
+  "location":{"x":100,"y":215},
+  "logo":"logo 4",
+  "menu":[
+    {"name":"food41", "description":"description41", "price":12000, "popularity":0.5, "image":"image41"},
+    {"name":"food42", "description":"description42", "price":16000, "popularity":0.5, "image":"image42"}
+  ]
+}

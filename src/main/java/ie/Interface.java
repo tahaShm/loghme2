@@ -33,6 +33,7 @@ public class Interface {
         String loghmeBody = "";
         try {
             loghmeBody = getUrlBody("http://138.197.181.131:8080/restaurants");
+            System.out.println(loghmeBody);
         }
         catch (Exception e) {
             e.printStackTrace();

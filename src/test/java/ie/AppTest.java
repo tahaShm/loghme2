@@ -17,36 +17,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AppTest {
-    public static String getUrlBody(String url) throws Exception {
-        URL urlObj = new URL(url);
-        URLConnection urlConnection = urlObj.openConnection();
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(
-                        urlConnection.getInputStream()));
-        String body = "", inputLine = "";
+    static String path = "src/test/resources/";
 
-        while ((inputLine = in.readLine()) != null)
-            body += inputLine;
-        in.close();
-        return body;
-    }
-
-    @Before
-    public void init() {
-        String loghmeBody = "";
-        ArrayList<Restaurant> restaurants = null;
-        ObjectMapper nameMapper = new ObjectMapper();
+    @BeforeClass
+    public static void init() {
+        App app = App.getInstance();
+        String res = "";
         try {
-            loghmeBody = getUrlBody("http://138.197.181.131:8080/restaurants");
-            restaurants = nameMapper.readValue(loghmeBody, ArrayList.class);
+            for (int i = 1; i < 6; i++) {
+                res = Files.readString(Paths.get(path + "restaurant" + i + ".json"));
+                app.addRestaurant(res);
+            }
         }
         catch (Exception e) {
-            e.printStackTrace();
+//            fail();
         }
-        ArrayList<Restaurant> convertedRestaurants = nameMapper.convertValue(restaurants, new TypeReference<ArrayList<Restaurant>>() { });
 
-        App app = App.getInstance();
-        app.setRestaurants(convertedRestaurants);
         app.getCustomer().setId("1234");
         app.getCustomer().setName("Houman Chamani");
         app.getCustomer().setPhoneNumber("+989300323231");
@@ -55,7 +41,12 @@ public class AppTest {
     }
 
     @Test
-    public void getRestaurant() {
+    public void testGetRestaurant() {
         
+    }
+
+    @Test
+    public void testFinalizeOrder() {
+
     }
 }

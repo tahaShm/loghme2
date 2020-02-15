@@ -5,19 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/Interface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ie/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/food1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/food2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/food3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/order1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/order2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/order3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/order4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/order5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant5.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +63,8 @@
       </method>
     </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="loghme" />
+      <module name="loghme2" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ie.exp.*" />
@@ -85,7 +73,9 @@
       </extension>
       <option name="PACKAGE_NAME" value="ie" />
       <option name="MAIN_CLASS_NAME" value="ie.AppTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,30 +147,38 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="506" y="198" width="898" height="710" key="#AppTest" timestamp="1581767393367">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="506" y="198" width="898" height="710" key="#AppTest/0.28.1920.1052@0.28.1920.1052" timestamp="1581767393367" />
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581592603817">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1581592603817" />
+    <state x="687" y="339" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581767391865">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="687" y="339" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1581767391865" />
     <state x="801" y="445" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581592590239">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="801" y="445" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1581592590239" />
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581754502777">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581767556982">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502777" />
-    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581754502776">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581767556982" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581767556981">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502776" />
-    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581754502776">
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581767556981" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581767556981">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502776" />
-    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581754502777">
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581767556981" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581767556982">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502777" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581767556982" />
     <state x="728" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581610131255">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
