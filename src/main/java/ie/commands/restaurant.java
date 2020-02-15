@@ -5,7 +5,7 @@ import ie.Food;
 import ie.Restaurant;
 import ie.exp.Forbidden403Exp;
 
-public class getRestaurant implements Command {
+public class restaurant implements Command {
     public String handle(String id) throws Exception {
         App app = App.getInstance();
         Restaurant restaurant = app.getRestaurantById(id);

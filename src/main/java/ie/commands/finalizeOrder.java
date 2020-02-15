@@ -10,14 +10,17 @@ public class finalizeOrder implements Command {
         App app = App.getInstance();
         int totalSum = 0;
         for (Map.Entry<String, Integer> entry : app.getCart().entrySet()) {
-            totalSum += app.sendPrice(entry.getKey());
+            totalSum += app.sendPrice(entry.getKey()) * app.sendQuantity(entry.getKey());
         }
         int credit = app.getCustomer().getCredit();
         if (credit >= totalSum) {
             app.getCustomer().setCredit(credit - totalSum);
             app.getCustomer().freeCart();
         }
-        else return "/getRestaurants";
+        else {
+            app.getCustomer().freeCart();
+            throw new NotEnoughCreditExp();
+        }
         return "/getProfile";
     }
 }

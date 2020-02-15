@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ie.commands.Command;
 import ie.exp.Forbidden403Exp;
+import ie.exp.NotEnoughCreditExp;
 import ie.exp.NotFound404Exp;
 import io.javalin.Javalin;
 
@@ -62,21 +63,19 @@ public class Interface {
                     firstToken = tokenizer.nextToken();
                 if (tokenizer.hasMoreElements())
                     secondToken = tokenizer.nextToken();
-                if (!(firstToken.isEmpty() || firstToken.equals("favicon.ico"))) {
+                try {
                     Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
                     Command newCommand = commandClass.getDeclaredConstructor().newInstance();
-                    try {
-                        response = newCommand.handle(secondToken);
-                    }
-                    catch (Exception e) {
-                        if (e instanceof NotFound404Exp)
-                            response = "Page not found";
-                        else if (e instanceof Forbidden403Exp)
-                            response = "Forbidden access";
-                    }
+                    response = newCommand.handle(secondToken);
                 }
-                else
-                    response = "Page not found";
+                catch (Exception e) {
+                    if (e instanceof NotFound404Exp)
+                        response = "Page not found";
+                    else if (e instanceof Forbidden403Exp)
+                        response = "Forbidden access";
+                    else if (e instanceof ClassNotFoundException)
+                        response = "Page not found";
+                }
                 ctx.contentType("text/html");
                 ctx.result(response);
         });
@@ -86,15 +85,19 @@ public class Interface {
                     StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
                     String httpStr = tokenizer.nextToken();
                     String domainStr = tokenizer.nextToken();
-                    String firstToken = "", secondToken = "", redirectUrl = "";
+                    String firstToken = "", redirectUrl = "";
                     if (tokenizer.hasMoreElements())
                         firstToken = tokenizer.nextToken();
-                    if (tokenizer.hasMoreElements())
-                        secondToken = tokenizer.nextToken();
 
                     Class<Command> commandClass = (Class<Command>) Class.forName("ie.commands." + firstToken);
                     Command newCommand = commandClass.getDeclaredConstructor().newInstance();
-                    redirectUrl = newCommand.handle(ctx.body());
+                    try {
+                        redirectUrl = newCommand.handle(ctx.body());
+                    }
+                    catch (Exception e) {
+                        if (e instanceof NotEnoughCreditExp)
+                            ctx.result("Not enough credit!");
+                    }
                     ctx.redirect(redirectUrl);
         });
     }

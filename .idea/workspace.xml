@@ -6,13 +6,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/showCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/showCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/finalizeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/finalizeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/getProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/getRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/getRestaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/restaurants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/showCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ie/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ie/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ie/Interface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/Interface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ie/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/commands/showCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/commands/showCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ie/commands/finalizeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/commands/finalizeOrder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,22 +163,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="801" y="445" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1581592590239" />
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581615213284">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581754502777">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581615213284" />
-    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581615213283">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502777" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581754502776">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581615213283" />
-    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581615213283">
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502776" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581754502776">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581615213283" />
-    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581615213284">
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502776" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581754502777">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581615213284" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581754502777" />
     <state x="728" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581610131255">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

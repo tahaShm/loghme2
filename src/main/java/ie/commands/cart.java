@@ -4,7 +4,7 @@ import ie.App;
 
 import java.util.Map;
 
-public class showCart implements Command {
+public class cart implements Command {
     public String handle(String body) {
         App app = App.getInstance();
         String content = "<!DOCTYPE html>\n" +

@@ -113,4 +113,8 @@ public class Customer {
     public void addCredit(int toAddCredit) {
         credit += toAddCredit;
     }
+
+    public int getFoodQuantity(String foodName) {
+        return foodCart.get(foodName);
+    }
 }

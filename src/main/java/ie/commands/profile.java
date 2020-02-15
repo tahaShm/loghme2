@@ -3,7 +3,7 @@ package ie.commands;
 import ie.App;
 import ie.Customer;
 
-public class getProfile implements Command {
+public class profile implements Command {
     public String handle(String id) throws Exception {
         App app = App.getInstance();
         Customer customer = app.getCustomer();

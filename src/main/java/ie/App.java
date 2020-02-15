@@ -187,9 +187,6 @@ public class App
             allowToAdd = true;
         else {
             String currentRestaurantId = customer.getRestaurantId();
-            System.out.println(currentRestaurantId);
-            System.out.println("******");
-            System.out.println(restaurant.getId());
             if (currentRestaurantId.equals(restaurant.getId()))
                 allowToAdd = true;
         }
@@ -254,6 +251,11 @@ public class App
         Restaurant restaurant = getRestaurantById(customer.getRestaurantId());
         int foodPrice = restaurant.sendFoodPriceByName(foodName);
         return foodPrice;
+    }
 
+    public int sendQuantity(String foodName) throws BadRequest400Exp, NotFound404Exp, FoodNotFoundExp {
+        if (!customer.isRestaurantSet() || customer.getFoodCart().isEmpty())
+            throw new BadRequest400Exp();
+        return customer.getFoodQuantity(foodName);
     }
 }
