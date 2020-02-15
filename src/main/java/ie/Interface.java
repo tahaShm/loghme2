@@ -45,7 +45,7 @@ public class Interface {
 
         App app = App.getInstance();
         app.setRestaurants(convertedRestaurants);
-        app.getCustomer().setId("6859");
+        app.getCustomer().setId("1234");
         app.getCustomer().setName("Houman Chamani");
         app.getCustomer().setPhoneNumber("+989300323231");
         app.getCustomer().setEmail("hoomch@gmail.com");
@@ -54,7 +54,6 @@ public class Interface {
         Javalin jvl = Javalin.create().start(7070);
         Javalin getServer = jvl.get("*",
                 ctx -> {
-                System.out.println("GET : " + ctx.url());
                 StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
                 String httpStr = tokenizer.nextToken();
                 String domainStr = tokenizer.nextToken();
@@ -75,13 +74,13 @@ public class Interface {
                         response = "Forbidden access";
                     else if (e instanceof ClassNotFoundException)
                         response = "Page not found";
+                    ctx.status(400);
                 }
                 ctx.contentType("text/html");
                 ctx.result(response);
         });
         Javalin postServer = jvl.post("*",
                 ctx -> {
-                    System.out.println("POST : " + ctx.url());
                     StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
                     String httpStr = tokenizer.nextToken();
                     String domainStr = tokenizer.nextToken();
@@ -97,6 +96,7 @@ public class Interface {
                     catch (Exception e) {
                         if (e instanceof NotEnoughCreditExp)
                             ctx.result("Not enough credit!");
+                        ctx.status(400);
                     }
                     ctx.redirect(redirectUrl);
         });

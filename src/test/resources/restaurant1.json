@@ -1,9 +1,0 @@
-{
-  "name": "Restaurant1",
-  "description": "desc1",
-  "location": {"x":  10, "y":  11},
-  "menu": [
-    {"name": "Food11", "description": "food desc11", "popularity": 0.8, "price": 20000},
-    {"name": "Food12", "description": "food desc12", "popularity": 0.6, "price": 30000}
-  ]
-}
