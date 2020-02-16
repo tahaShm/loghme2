@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d17626fa-1507-4c4a-82c2-71cabd96e137" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ie/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/addCredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/addCredit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/addToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/addToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/commands/finalizeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/commands/finalizeOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ie/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ie/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/restaurant2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurant3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/restaurant3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/Interface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/Interface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/commands/addCredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/commands/addCredit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/commands/addToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/commands/addToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ie/commands/finalizeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ie/commands/finalizeOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/loghme-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/loghme-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ie/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ie/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant1.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant2.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant3.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant4.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurant5.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurant5.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +48,7 @@
       <recent name="ie.c" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="Application.Interface">
     <configuration name="Interface" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.Interface" />
       <module name="loghme2" />
@@ -185,22 +163,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="801" y="445" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1581592590239" />
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581856837449">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1581866304619">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581856837449" />
-    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581856837446">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052" timestamp="1581866304619" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1581866304619">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581856837446" />
-    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581856837445">
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052" timestamp="1581866304619" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1581866304618">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581856837445" />
-    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581856837448">
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052" timestamp="1581866304618" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1581866304619">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581856837448" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052" timestamp="1581866304619" />
     <state x="728" y="473" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581610131255">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

@@ -35,9 +35,7 @@ public class AppTest {
         app.getCustomer().setEmail("hoomch@gmail.com");
         app.getCustomer().setCredit(100000);
 
-        String[] mainArgs = new String[1];
-        mainArgs[0] = "test";
-        Interface.main(mainArgs);
+        Server.run();
     }
 
     @Test
@@ -75,6 +73,6 @@ public class AppTest {
 
     @AfterClass
     public static void stopServer() {
-        Interface.stop();
+        Server.stop();
     }
 }
