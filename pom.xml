@@ -50,6 +50,11 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.8.0-beta4</version>
         </dependency>
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>3.4.04</version>
+        </dependency>
     </dependencies>
 
     <build>

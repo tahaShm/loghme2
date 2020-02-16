@@ -1,9 +1,10 @@
 {
-  "name": "Restaurant4",
-  "description": "desc4",
-  "location": {"x":  2, "y":  15},
-  "menu": [
-    {"name": "Food41", "description": "food desc41", "popularity": 1, "price": 25000},
-    {"name": "Food42", "description": "food desc42", "popularity": 0.3, "price": 36300}
+  "id":"4",
+  "name":"restaurant4",
+  "location":{"x":100,"y":215},
+  "logo":"logo 4",
+  "menu":[
+    {"name":"food41", "description":"description41", "price":12000, "popularity":0.5, "image":"image41"},
+    {"name":"food42", "description":"description42", "price":16000, "popularity":0.5, "image":"image42"}
   ]
 }

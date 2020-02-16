@@ -3,6 +3,7 @@ package ie;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ie.commands.Command;
+import ie.exp.BadRequest400Exp;
 import ie.exp.Forbidden403Exp;
 import ie.exp.NotEnoughCreditExp;
 import ie.exp.NotFound404Exp;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Interface {
+    public static Javalin jvl;
     public static String getUrlBody(String url) throws Exception {
         URL urlObj = new URL(url);
         URLConnection urlConnection = urlObj.openConnection();
@@ -29,19 +31,18 @@ public class Interface {
         return body;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void init() {
         String loghmeBody = "";
+        ArrayList<Restaurant> restaurants = null;
+        ObjectMapper nameMapper = new ObjectMapper();
         try {
             loghmeBody = getUrlBody("http://138.197.181.131:8080/restaurants");
-            System.out.println(loghmeBody);
+            restaurants = nameMapper.readValue(loghmeBody, ArrayList.class);
         }
         catch (Exception e) {
             e.printStackTrace();
         }
 
-        ArrayList<Restaurant> restaurants;
-        ObjectMapper nameMapper = new ObjectMapper();
-        restaurants = nameMapper.readValue(loghmeBody, ArrayList.class);
         ArrayList<Restaurant> convertedRestaurants = nameMapper.convertValue(restaurants, new TypeReference<ArrayList<Restaurant>>() { });
 
         App app = App.getInstance();
@@ -51,8 +52,13 @@ public class Interface {
         app.getCustomer().setPhoneNumber("+989300323231");
         app.getCustomer().setEmail("hoomch@gmail.com");
         app.getCustomer().setCredit(100000);
+    }
 
-        Javalin jvl = Javalin.create().start(7070);
+    public static void main(String[] args) {
+        if (args.length == 0 || !args[0].equals("test"))
+            init();
+
+        jvl = Javalin.create().start(7070);
         Javalin getServer = jvl.get("*",
                 ctx -> {
                 StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
@@ -69,19 +75,22 @@ public class Interface {
                     response = newCommand.handle(secondToken);
                 }
                 catch (Exception e) {
-                    if (e instanceof NotFound404Exp)
+                    if (e instanceof NotFound404Exp || e instanceof ClassNotFoundException) {
                         response = "Page not found";
-                    else if (e instanceof Forbidden403Exp)
+                        ctx.status(404);
+                    }
+                    else if (e instanceof Forbidden403Exp) {
                         response = "Forbidden access";
-                    else if (e instanceof ClassNotFoundException)
-                        response = "Page not found";
-                    ctx.status(400);
+                        ctx.status(403);
+                    }
                 }
                 ctx.contentType("text/html");
                 ctx.result(response);
         });
+
         Javalin postServer = jvl.post("*",
                 ctx -> {
+                    boolean noRedirect = false;
                     StringTokenizer tokenizer = new StringTokenizer(ctx.url(), "/");
                     String httpStr = tokenizer.nextToken();
                     String domainStr = tokenizer.nextToken();
@@ -95,11 +104,17 @@ public class Interface {
                         redirectUrl = newCommand.handle(ctx.body());
                     }
                     catch (Exception e) {
+                        ctx.status(400);
                         if (e instanceof NotEnoughCreditExp)
                             ctx.result("Not enough credit!");
-                        ctx.status(400);
+                        noRedirect = true;
                     }
-                    ctx.redirect(redirectUrl);
+                    if (!noRedirect)
+                        ctx.redirect(redirectUrl);
         });
+    }
+
+    public static void stop() {
+        jvl.stop();
     }
 }

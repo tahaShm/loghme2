@@ -1,7 +1,7 @@
 {
   "id":"2",
   "name":"restaurant2",
-  "location":{"x":-205,"y":50},
+  "location":{"x":-20,"y":50},
   "logo":"logo 2",
   "menu":[
     {"name":"food21", "description":"description21", "price":3000, "popularity":0.5, "image":"image21"},

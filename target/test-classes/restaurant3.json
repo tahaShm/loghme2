@@ -1,9 +1,10 @@
 {
-  "name": "Restaurant3",
-  "description": "desc3",
-  "location": {"x":  14, "y":  0},
-  "menu": [
-    {"name": "Food31", "description": "food desc31", "popularity": 0.9, "price": 14000},
-    {"name": "Food32", "description": "food desc32", "popularity": 0.4, "price": 43000}
+  "id":"3",
+  "name":"restaurant3",
+  "location":{"x":0,"y":-170},
+  "logo":"logo 3",
+  "menu":[
+    {"name":"food31", "description":"description31", "price":10000, "popularity":0.5, "image":"image31"},
+    {"name":"food32", "description":"description32", "price":5000, "popularity":0.5, "image":"image32"}
   ]
 }

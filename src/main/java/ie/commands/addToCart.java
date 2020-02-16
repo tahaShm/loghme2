@@ -28,9 +28,9 @@ public class addToCart implements Command {
             app.addToCart(food, restaurant);
         }
         catch (FoodFromOtherRestaurantInCartExp e) {
-            return "/getRestaurants";
+            return "/restaurants";
         }
 
-        return "/getRestaurant/" + restaurantId;
+        return "/restaurant/" + restaurantId;
     }
 }

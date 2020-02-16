@@ -21,6 +21,6 @@ public class finalizeOrder implements Command {
             app.getCustomer().freeCart();
             throw new NotEnoughCreditExp();
         }
-        return "/getProfile";
+        return "/profile";
     }
 }

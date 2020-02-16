@@ -13,6 +13,6 @@ public class addCredit implements Command {
         App app = App.getInstance();
         if (!credit.isEmpty())
             app.addCredit(Integer.parseInt(credit));
-        return "getProfile";
+        return "profile";
     }
 }

@@ -1,9 +1,10 @@
 {
-  "name": "Restaurant1",
-  "description": "desc1",
-  "location": {"x":  10, "y":  11},
-  "menu": [
-    {"name": "Food11", "description": "food desc11", "popularity": 0.8, "price": 20000},
-    {"name": "Food12", "description": "food desc12", "popularity": 0.6, "price": 30000}
+  "id":"1",
+  "name":"restaurant1",
+  "location":{"x":-205,"y":-133},
+  "logo":"logo 1",
+  "menu":[
+    {"name":"food11", "description":"description11", "price":33000, "popularity":0.5, "image":"image11"},
+    {"name":"food12", "description":"description12", "price":40000, "popularity":0.5, "image":"image12"}
   ]
 }
